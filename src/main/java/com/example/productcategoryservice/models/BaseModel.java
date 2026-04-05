@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public abstract class BaseModel {
-    String Id;
+    String id;
 
     String createdAt;
 

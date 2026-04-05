@@ -13,7 +13,6 @@ public class ProductController {
     // GET /products
     @GetMapping("/products")
     public List<Product> getAllProducts(){
-
         Product product1 = new Product();
         product1.setId("1L");
         product1.setTitle("Iphone");
