@@ -15,7 +15,7 @@ public class ProductController {
     public List<Product> getAllProducts(){
         Product product1 = new Product();
         product1.setId("1L");
-        product1.setTitle("Iphone");
+        product1.setTitle("Iphone B1");
         List<Product> products = new ArrayList<>();
         products.add(product1);
         return products;
