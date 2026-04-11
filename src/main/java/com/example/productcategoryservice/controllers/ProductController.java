@@ -2,9 +2,7 @@ package com.example.productcategoryservice.controllers;
 
 import com.example.productcategoryservice.dtos.ProductDto;
 import com.example.productcategoryservice.models.Product;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,5 +30,10 @@ public class ProductController {
         ProductDto product1 = new ProductDto();
         product1.setId(productId);
         return product1;
+    }
+
+    @PostMapping("/products")
+    public ProductDto createProduct(@RequestBody ProductDto input){
+        return input;
     }
 }
