@@ -2,6 +2,8 @@ package com.example.productcategoryservice.controllers;
 
 import com.example.productcategoryservice.dtos.ProductDto;
 import com.example.productcategoryservice.models.Product;
+import com.example.productcategoryservice.services.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -10,13 +12,16 @@ import java.util.List;
 @RestController
 public class ProductController {
 
+    @Autowired
+    private ProductService productService;
+
     // GET /products
     @GetMapping("/products")
-    public List<Product> getAllProducts(){
-        Product product1 = new Product();
-        product1.setId("1L");
+    public List<ProductDto> getAllProducts(){
+        ProductDto product1 = new ProductDto();
+        product1.setId(39L);
         product1.setTitle("Iphone B1");
-        List<Product> products = new ArrayList<>();
+        List<ProductDto> products = new ArrayList<>();
         products.add(product1);
         return products;
     }
